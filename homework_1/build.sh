@@ -1,0 +1,1 @@
+docker build . -t homework_1_image:1.0
