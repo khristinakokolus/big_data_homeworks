@@ -1,0 +1,22 @@
+Пояснення схем таблиць.
+В даному завданні було спроектовано 3 таблиці для певних заданих запитів.
+
+
+1. product_rating містить product_id, review_id, star_rating та review_body.
+Дана таблиця містить лише необхідні дані. Окрім цього partition key складається
+із двох колонок product_id та star_rating, що дасть змогу достатньо швидко отримати відповіді
+за заданим product_id та разом заданими product_id і star_rating.
+
+2. сustomer_rating містить customer_id, review_id, star_rating та review_body.
+Дана таблиця містить лише необхідні дані. Окрім цього partition key складається
+із двох колонок customer_id та star_rating, що дасть змогу достатньо швидко отримати відповіді
+за заданим customer_id та разом заданими customer_id і star_rating.
+
+3. Таблиця customer_statistics містить customer_id, total_reviews_amount та product_ids.
+total_reviews_amount - це кількість відгуків, які залишив певний покупець.
+product_ids - це список продуктів про, які покупець написав відгук. Завдяки цим
+двом колонкам та partition key, який складається з customer_id, total_reviews_amount,
+product_ids, можна буде отримати достатньо швидку відповідь на третій запит
+(Отримувати користувачів(customer_id), які залишили більше ніж N відгуків
+на платформі і які також залишили відгук для продукту product_id
+(N та product_id повинне задаватися в запиті).
