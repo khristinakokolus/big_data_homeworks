@@ -36,8 +36,19 @@ After that bash script have to work.
 
 1. docker ps command after cluster launching
 
+![image](https://user-images.githubusercontent.com/60686300/165501528-9684fd9a-30b3-4ca2-942b-99bd15c692fb.png)
+
 
 2. DESCRIBE TABLES after execution of ```DDL_script.sh```
 
 
+![image](https://user-images.githubusercontent.com/60686300/165501731-62943e6c-e057-40bf-81c3-1ca4749df5c3.png)
+
+
 3. SELECT * from both tables after execution of ```DML_script.sh```
+
+![image](https://user-images.githubusercontent.com/60686300/165501796-20c72233-3926-4cb0-a063-a1eff0d788f4.png)
+
+4. Shutting down cluster
+
+![image](https://user-images.githubusercontent.com/60686300/165502324-0e23aec9-a68b-4fab-b82f-1a510a7fda0d.png)
