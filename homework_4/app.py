@@ -1,31 +1,54 @@
 from flask import Flask, request
-import requests
+import json
+import default_values
 from data_selection import reviews_by_product, create_connection
-
-PRODUCT_TABLE = "product_statistics"
-CUSTOMER_TABLE = "customer_statistics"
-HATERS_HACKERS_TABLE = "haters_backers"
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello_geek():
-    return '<h1>Hello from Flask & Docker</h2>'
+def check_rest_api():
+    return 'Hello from REST API'
 
 
 @app.route('/reviews_by_product')
-def get_answer():
+def get_reviews_by_product():
     print("here")
-    client = create_connection(PRODUCT_TABLE)
+    client = create_connection()
     product_id = request.args.get('product_id')
-    print("stated")
-    return reviews_by_product(client, PRODUCT_TABLE, product_id)
+    reviews = json.dumps(reviews_by_product(client, default_values.product_table, product_id))
+    client.close()
+    return reviews
 
 
-@app.route('/reviews_data')
-def post_constrains():
-    return "hello"
+@app.route('/reviews_by_product')
+def get_reviews_by_product_rating():
+    return None
+
+
+@app.route('/reviews_by_product')
+def get_reviews_by_customer():
+    return None
+
+
+@app.route('/reviews_by_product')
+def get_most_reviewed_products():
+    return None
+
+
+@app.route('/reviews_by_product')
+def get_most_active_customers():
+    return None
+
+
+@app.route('/reviews_by_product')
+def get_haters():
+    return None
+
+
+@app.route('/reviews_by_product')
+def get_backers():
+    return None
 
 
 if __name__ == '__main__':
