@@ -31,4 +31,17 @@ bash scripts/populate_data_cassandra.sh
 bash scripts/run_rest_api.sh
 ```
 
-## Results
+
+5. To get answers to questions use such queries.
+
+To get reviews by product id:
+    - http://localhost:5000/reviews_by_product?product_id=B002G54DAA
+
+To get reviews by product id and star rating:
+    - http://localhost:5000/reviews_by_product?product_id=B002G54DAA&star_rating=5
+
+To get reviews by customer id:
+    - http://localhost:5000/reviews_by_product?customer_id=43173394
+
+
+NOTE: sample select statements are located in select_statements.cql.

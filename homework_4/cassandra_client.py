@@ -1,3 +1,6 @@
+import math
+
+
 class CassandraClient:
     def __init__(self, host, port, keyspace):
         self.host = host
@@ -19,6 +22,7 @@ class CassandraClient:
     def insert_product_record(self, table, review_id, product_id, product_title, star_rating, review_body, review_date):
         review_body = review_body.replace("\'", "").replace("\"", "")
         product_title = product_title.replace("\'", "").replace("\"", "")
+        star_rating = 0 if math.isnan(star_rating) else star_rating
         data = (table, review_id, product_id, product_title, star_rating, review_body, review_date)
         query = "INSERT INTO %s (review_id, product_id, product_title, star_rating, review_body, review_date) " \
                 "VALUES ('%s', '%s', '%s', %d, '%s', %r)" % data
