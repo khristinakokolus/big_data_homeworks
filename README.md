@@ -21,3 +21,4 @@ git clone https://github.com/khristinakokolus/big_data_homeworks.git
 3. Data modeling in Cassandra. It is in ```homework_3``` folder.
 4. Cassandra interaction. It is in ```homework_4``` folder.
 5. Kafka launch. It is in ```homeworks_5``` folder.
+6. Writing to Kafka using code. It is in ```homeworks_6``` folder.
