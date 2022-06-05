@@ -39,3 +39,13 @@ docker-compose down
 ```
 
 ## Results
+
+
+- docker ps result after Spark launching
+
+<img width="972" alt="ps" src="https://user-images.githubusercontent.com/60686300/172067702-6cd71a70-7808-468b-98f5-b324f8fd431a.png">
+
+
+- result of the program using Spark methods. Amount of data in the dataset is 6362621
+
+![spark-res](https://user-images.githubusercontent.com/60686300/172067759-e8cb5f1e-bbe7-4613-8454-031f8618aa06.jpg)
