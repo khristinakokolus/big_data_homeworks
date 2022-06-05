@@ -3,6 +3,9 @@ version: '2'
 services:
   spark:
     image: docker.io/bitnami/spark:3
+    container_name: spark-master
+    volumes:
+      - .:/opt/app
     networks:
       - spark-network
     environment:
@@ -15,6 +18,9 @@ services:
       - '8080:8080'
   spark-worker:
     image: docker.io/bitnami/spark:3
+    container_name: spark-worker
+    volumes:
+      - .:/opt/app
     networks:
       - spark-network
     environment:
