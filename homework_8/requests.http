@@ -1,0 +1,25 @@
+###
+POST http://localhost:8080/fraud_transactions
+Content-Type: application/json
+
+{
+  "uid": "C13692003"
+}
+
+###
+POST http://localhost:8080/transactions_amounts
+Content-Type: application/json
+
+{
+  "uid": "C799306600"
+}
+
+###
+POST http://localhost:8080/received_transactions
+Content-Type: application/json
+
+{
+  "uid": "C799306600",
+  "start_date": "2022-05-04",
+  "end_date": "2022-06-04"
+}

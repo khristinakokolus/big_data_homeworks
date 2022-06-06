@@ -23,4 +23,5 @@ git clone https://github.com/khristinakokolus/big_data_homeworks.git
 5. Kafka launch. It is in ```homework_5``` folder.
 6. Writing to Kafka using code. It is in ```homework_6``` folder.
 7. Reading from Kafka using code. It is in ```homework_7``` folder.
+8. Interact with Cassandra and Kafka through code. It is in ```homework_8``` folder.
 9. Spark Launch. It is in ```homework_9``` folder.
