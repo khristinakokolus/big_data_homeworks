@@ -299,42 +299,42 @@ def process_data(df):
     print("Started processing 1 question: ")
     # find trending videos
     trending_videos = find_trending_videos(df)
-    write_data(trending_videos, "results_test/trending_videos.json")
+    write_data(trending_videos, "results/trending_videos.json")
     print("Successfully processed 1 question")
     print()
 
     print("Started processing 2 question: ")
     # find trending week categories
     trending_week_categories = find_trending_week_categories(df, category_file)
-    write_data(trending_week_categories, "results_test/trending_week_categories.json")
+    write_data(trending_week_categories, "results/trending_week_categories.json")
     print("Successfully processed 2 question")
     print()
 
     print("Started processing 3 question: ")
     # find trending tags
     trending_tags = find_trending_tags(df)
-    write_data(trending_tags, "results_test/trending_tags.json")
+    write_data(trending_tags, "results/trending_tags.json")
     print("Successfully processed 3 question")
     print()
 
     print("Started processing 4 question: ")
     # find top viewed channels
     top_viewed_channels = find_top_viewed_channels(df)
-    write_data(top_viewed_channels, "results_test/top_viewed_channels.json")
+    write_data(top_viewed_channels, "results/top_viewed_channels.json")
     print("Successfully processed 4 question")
     print()
 
     print("Started processing 5 question: ")
     # find channels with trending videos
     channels_with_trending_videos = find_channels_with_trending_videos(df)
-    write_data(channels_with_trending_videos, "results_test/channels_with_trending_videos.json")
+    write_data(channels_with_trending_videos, "results/channels_with_trending_videos.json")
     print("Successfully processed 5 question")
     print()
 
     print("Started processing 6 question: ")
     # find top videos by categories
     top_videos_by_ratio = find_top_videos_by_ratio(df, category_file)
-    write_data(top_videos_by_ratio, "results_test/top_videos_by_ratio.json")
+    write_data(top_videos_by_ratio, "results/top_videos_by_ratio.json")
     print("Successfully processed 6 question")
     print()
 
